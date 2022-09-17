@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.search-form {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 18px;
+  display: flex;
+  position: sticky;
+  text-align: center;
+}
+.search-form > input {
+  width: 85%;
+  padding: 16px;
+  border: 1px solid #32323e;
+  font-weight: bold;
+}
+.search-form > button {
+  width: 20%;
+  cursor: pointer;
+  padding: 16px;
+  background-color: #bb7e00;
+  font-weight: bold;
+  color: white;
+  border: 1px solid #32323e;
+  text-transform: uppercase;
+}
+.search-form > input:focus {
+  outline: 0;
+}
+#hasilcari {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 32px;
+  max-width: 400px;
+  padding: 16px;
+  text-align: center;
+  background-color: rgb(164, 46, 46);
+  border-radius: 12px;
+}
+.hasilcari > .foto-lambang {
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.hasilcari > h2 {
+  font-weight: lighter;
+}
+.bukunotfound {
+  text-align: center;
+}
+
+/* ini beda lagi */
+#bookhasil {
+  flex-direction: column;
+  margin: 0 auto;
+  align-content: center;
+  max-width: 650px;
+}
+#booklist {
+  margin-top: 32px;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+#booklist > .placeholder {
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.book {
+  margin-bottom: 18px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.book .thumbnail-buku {
+  width: 150px;
+  height: 250px;
+  flex-grow: 1;
+  object-fit: contain;
+}
+
+.info-buku {
+  padding: 24px;
+  flex-grow: 3;
+}
+
+.info-buku > h2 {
+  font-weight: lighter;
+}
+
+.info-buku > p {
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.info-buku > a {
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* ini beda lagi */
+
+@media screen and (max-width: 550px) {
+  .search-form {
+    flex-direction: column;
+    position: static;
+  }
+
+  .search-form > input {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .search-form > button {
+    width: 100%;
+  }
+  #booklist {
+    flex-direction: column;
+  }
+  .book .thumbnail-buku {
+    width: 250px;
+    height: 350px;
+    align-self: center;
+  }
+}
